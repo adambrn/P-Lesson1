@@ -9,7 +9,6 @@ target_number = randint(LOWER_LIMIT, UPPER_LIMIT)
 attempts = 0
 
 while attempts < MAX_ATTEMPTS:
-    attempts += 1
     user_guess = int(input("Введите ваше предположение: "))
 
     if user_guess < target_number:
@@ -19,6 +18,8 @@ while attempts < MAX_ATTEMPTS:
     else:
         print("Вы угадали число!")
         break
+    attempts += 1
 
-print("К сожалению, вы исчерпали все попытки. Загаданное число было:", target_number)
+if attempts == MAX_ATTEMPTS:
+    print("К сожалению, вы исчерпали все попытки. Загаданное число было:", target_number)
 
