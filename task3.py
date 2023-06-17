@@ -1,7 +1,7 @@
 def is_prime_number(number):
     if number == 2:
         return True
-    if not number % 2:
+    if number % 2 == 0:
         return False
     for i in range(3, int(number ** 0.5 + 1),2):
         if not number % i:
